@@ -16,17 +16,23 @@
   <div class="app">
     <header class="topbar">
       <h1 class="topbar__title">小役カウンター</h1>
-
-      <div class="spins">
-        <span class="spins__label">回転数</span>
-        <button class="btn btn--minus" data-spin="-1" aria-label="回転数を1減らす">−1</button>
-        <span class="spins__value" id="spinCount">0</span>
-        <button class="btn btn--plus" data-spin="1" aria-label="回転数を1増やす">+1</button>
-        <button class="btn btn--plus btn--big" data-spin="10" aria-label="回転数を10増やす">+10</button>
-      </div>
-
       <button class="btn btn--reset" id="resetBtn" aria-label="すべてリセット">リセット</button>
     </header>
+
+    <section class="spinbar">
+      <button class="spinbar__minus" data-spin="-1" aria-label="回転数を1減らす">−1</button>
+
+      <div class="spinbar__display">
+        <span class="spinbar__label">回転数</span>
+        <span class="spinbar__value" id="spinCount">0</span>
+      </div>
+
+      <button class="spinbar__plus" data-spin="1" aria-label="回転数を1増やす">
+        +1<span class="spinbar__plus-sub">タップ</span>
+      </button>
+
+      <button class="spinbar__plus10" data-spin="10" aria-label="回転数を10増やす">+10</button>
+    </section>
 
     <main class="board" id="board"></main>
   </div>
