@@ -17,12 +17,13 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 button {
@@ -65,7 +66,8 @@ button {
 }
 
 .app {
-  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
@@ -98,9 +100,9 @@ button {
   padding: 6px;
   background: var(--panel);
   border-bottom: 1px solid var(--panel-border);
-  height: 34vh;
-  max-height: 190px;
-  min-height: 96px;
+  height: 28vh;
+  max-height: 150px;
+  min-height: 88px;
 }
 
 .spinbar__minus {
@@ -208,7 +210,6 @@ button {
   grid-template-columns: repeat(5, 1fr);
   gap: 6px;
   padding: 6px;
-  min-height: 0;
 }
 
 .card {
@@ -218,8 +219,7 @@ button {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  min-height: 0;
-  overflow: hidden;
+  min-height: 170px;
 }
 
 .card__label {
@@ -239,7 +239,7 @@ button {
   font-size: clamp(22px, 6vw, 44px);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
-  min-height: 0;
+  min-height: 44px;
 }
 
 .card__prob {
