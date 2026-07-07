@@ -8,16 +8,13 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="rotate-hint">
-    <div class="rotate-hint__icon">📱↻</div>
-    <div>横向きにしてご利用ください</div>
-  </div>
-
   <div class="app">
     <header class="topbar">
       <h1 class="topbar__title">小役カウンター</h1>
       <button class="btn btn--reset" id="resetBtn" aria-label="すべてリセット">リセット</button>
     </header>
+
+    <main class="board" id="board"></main>
 
     <section class="spinbar">
       <button class="spinbar__minus" data-spin="-1" aria-label="回転数を1減らす">−1</button>
@@ -33,8 +30,6 @@
 
       <button class="spinbar__plus10" data-spin="10" aria-label="回転数を10増やす">+10</button>
     </section>
-
-    <main class="board" id="board"></main>
   </div>
 
   <div class="confirm-overlay" id="confirmOverlay">
