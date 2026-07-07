@@ -203,6 +203,7 @@ button {
 
 .card__count {
   flex: 1 1 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,6 +211,11 @@ button {
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   min-height: 36px;
+  background: transparent;
+}
+
+.card__count:active {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .card__prob {

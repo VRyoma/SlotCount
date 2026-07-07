@@ -58,7 +58,7 @@ function buildBoard() {
     card.style.setProperty("--card-color", y.color);
     card.innerHTML = `
       <div class="card__label">${y.label}</div>
-      <div class="card__count" id="count-${y.key}">0</div>
+      <button class="card__count" id="count-${y.key}" data-yaku="${y.key}" data-delta="1" aria-label="${y.label}を1増やす（タップ）">0</button>
       <div class="card__prob" id="prob-${y.key}">-</div>
       <div class="card__buttons">
         <button class="btn btn--minus" data-yaku="${y.key}" data-delta="-1" aria-label="${y.label}を1減らす">−1</button>
