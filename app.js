@@ -1,10 +1,10 @@
 const STORAGE_KEY = "slotcount-state-v1";
 
 const YAKU = [
+  { key: "grape", label: "ブドウ", color: "#a855f7" },
+  { key: "cherry", label: "チェリー", color: "#ef4444" },
   { key: "c", label: "C", color: "#4fc3f7" },
   { key: "bell", label: "ベル", color: "#fde047" },
-  { key: "cherry", label: "チェリー", color: "#ef4444" },
-  { key: "grape", label: "ブドウ", color: "#a855f7" },
   { key: "bar", label: "BAR", color: "#ffa726" },
   { key: "seven", label: "7", color: "#dc2626" },
 ];
