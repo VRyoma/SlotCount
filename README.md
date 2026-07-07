@@ -13,16 +13,23 @@
 
 ## Cloudflareへのデプロイ
 
-静的ファイルのみのサイトなのでビルドコマンドは不要です。
+静的ファイルのみのサイトなのでビルドコマンドは不要です。`wrangler.toml` に `[assets]` を設定済みなので、Cloudflareの新しい「Workers」Git連携（デプロイコマンドが `wrangler deploy` になるタイプ）でも、従来の「Pages」プロジェクトでもそのままデプロイできます。
 
-### Cloudflare Pages（ダッシュボード）
+### CloudflareダッシュボードでGitHub連携する場合
 
-1. Cloudflare PagesでこのGitHubリポジトリを接続
+1. Cloudflareダッシュボードでこのリポジトリを接続
 2. ビルドコマンド: なし（空欄）
-3. ビルド出力ディレクトリ: `/`
+3. デプロイコマンド:
+   - 「Workers」タイプのプロジェクト: `npx wrangler deploy`（デフォルトのままでOK）
+   - 「Pages」タイプのプロジェクト: `npx wrangler pages deploy .`
+   - ビルド出力ディレクトリを聞かれた場合は `/`
 
-### Wrangler CLI
+### Wrangler CLIで直接デプロイする場合
 
 ```sh
+# Workersとしてデプロイ（静的アセットのみ）
+npx wrangler deploy
+
+# もしくはPagesとしてデプロイ
 npx wrangler pages deploy .
 ```
